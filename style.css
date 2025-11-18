@@ -18,6 +18,8 @@ body{
 }
 
 .wrapper{
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
     width: 420px;
     background: transparent;
     border: 2px solid rgba(255,255,255, .2);
@@ -113,8 +115,15 @@ p{
     color: #fff;
 }
 
+@media(max-width:900px){
+    .wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media(max-width: 600px){
     .wrapper{
-        width: 90%;
+        grid-template-columns: 1fr;
+        
     }
 }
